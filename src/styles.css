@@ -1,3 +1,10 @@
+body, html {
+    height: 100%;
+    margin: 2em;
+    margin-left: 8em;
+    margin-right: 8em;
+}
+
 img {
     height: 45em;
 }

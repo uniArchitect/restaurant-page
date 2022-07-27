@@ -2,14 +2,33 @@
 import './styles.css';
 import Cover_Image from './images/food-cover.jpg';
 
-const TAB_CONTAINER_DIV = document.createElement('div');
+// GLOBAL SCOPE
+const HEADER_DIV = document.createElement('div');
 const CONTAINER_DIV = document.createElement('div');
 
-document.body.appendChild(TAB_CONTAINER_DIV).className = 'tab-container';
-document.body.appendChild(CONTAINER_DIV).className = 'body-container';
+// Header links
+const NAV_MENU_UL = document.createElement('ul');
+const NAV_SUBMENU_LI = document.createElement('li');
+const HOURS_LOCATION_A = document.createElement('a');
+const MENUS_A = document.createElement('a');
+const ABOUT_A = document.createElement('a');
+const PRIVATE_EVENTS_A = document.createElement('a');
 
 // Add cover image
 const COVER_IMAGE = new Image();
 COVER_IMAGE.src = Cover_Image;
 
+// Create container bodies
+document.body.appendChild(HEADER_DIV).className = 'header';
+document.body.appendChild(CONTAINER_DIV).className = 'body-container';
+
+// Append links to header div
+HEADER_DIV.appendChild(NAV_MENU_UL);
+NAV_MENU_UL.appendChild(NAV_SUBMENU_LI);
+NAV_SUBMENU_LI.appendChild(HOURS_LOCATION_A);
+NAV_SUBMENU_LI.appendChild(MENUS_A);
+NAV_SUBMENU_LI.appendChild(ABOUT_A);
+NAV_SUBMENU_LI.appendChild(PRIVATE_EVENTS_A);
+
+// Append banner image to homepage
 CONTAINER_DIV.appendChild(COVER_IMAGE);
