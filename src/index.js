@@ -1,4 +1,5 @@
 // Home Page
+import './styles.css';
 import Cover_Image from './images/food-cover.jpg';
 
 const TAB_CONTAINER_DIV = document.createElement('div');
