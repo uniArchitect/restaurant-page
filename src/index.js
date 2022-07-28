@@ -2,6 +2,23 @@
 import './styles.css';
 import Cover_Image from './images/boba-cover.jpg';
 
+// Class to create new page when submenu-link is 'clicked'
+// class PageUI {
+//     constructor(pageName) {
+//         this.name = pageName
+//     }
+
+//     // switch to About page
+//     aboutPage = document.querySelector('.submenu-link').addEventListener('click', () => {
+//         document.body.removeChild('CONTAINER_DIV')
+//         const ABOUT_CONTAINER_DIV = document.createElement('div')
+
+//         document.body.appendChild(ABOUT_CONTAINER_DIV)
+
+//         return ABOUT_CONTAINER_DIV
+//     })
+// }
+
 // GLOBAL SCOPE
 const HEADER_DIV = document.createElement('div');
 const CONTAINER_DIV = document.createElement('div');
@@ -32,12 +49,14 @@ ABOUT_A.setAttribute('href', '#');
 PRIVATE_EVENTS_A.setAttribute('href', '#');
 
 // Add cover image
+// Remove cover image when submenu-link is 'clicked'
 const COVER_IMAGE = new Image();
 COVER_IMAGE.src = Cover_Image;
 
 // Create container bodies
+// cover-container will disappear when a submenu-link is clicked
 document.body.appendChild(HEADER_DIV).className = 'header';
-document.body.appendChild(CONTAINER_DIV).className = 'body-container';
+document.body.appendChild(CONTAINER_DIV).className = 'cover-container';
 
 // Append links to header div
 HEADER_DIV.appendChild(NAV_MENU_UL).className = 'nav-menu';
@@ -57,3 +76,16 @@ NAV_PRIVATE_EVENTS_LI.appendChild(PRIVATE_EVENTS_A).className = 'submenu-link';
 
 // Append banner image to homepage
 CONTAINER_DIV.appendChild(COVER_IMAGE);
+
+// BUG: .submenu-link needs to be specific, querySelector a specific ID for each link to make each link work correctly
+document.querySelector('.submenu-link').addEventListener('click', () => {
+    document.body.removeChild(CONTAINER_DIV)
+    const LOCATION_CONTAINER_DIV = document.createElement('div')
+
+    document.body.appendChild(LOCATION_CONTAINER_DIV).className = 'about-page'
+    LOCATION_CONTAINER_DIV.innerHTML = "ABOUT PAGE"
+
+    return LOCATION_CONTAINER_DIV
+})
+
+// const aboutPage = new PageUI();
