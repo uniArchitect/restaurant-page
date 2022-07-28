@@ -19,3 +19,35 @@ body, html {
 img {
     height: 45em;
 }
+
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 1084px;
+}
+
+    li {
+        list-style: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        text-decoration: none;
+    }
+
+        .submenu-link:hover {
+            color: brown;
+        }
+
+        .submenu-link:active {
+            color: black;
+            text-decoration: none;
+        }
+
+.body-container {
+    width: 1084px;
+}
