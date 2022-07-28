@@ -1,8 +1,19 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('ttf'),
+      url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body, html {
     height: 100%;
     margin: 2em;
     margin-left: 8em;
     margin-right: 8em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 img {
