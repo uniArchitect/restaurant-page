@@ -1,6 +1,6 @@
 // Home Page
 import './styles.css';
-import Cover_Image from './images/food-cover.jpg';
+import Cover_Image from './images/boba-cover.jpg';
 
 // GLOBAL SCOPE
 const HEADER_DIV = document.createElement('div');
