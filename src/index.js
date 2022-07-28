@@ -64,28 +64,66 @@ HEADER_DIV.appendChild(NAV_LOGO_DIV).className = 'nav-logo';
 
 NAV_MENU_UL.appendChild(NAV_HOURS_LOCATION_LI);
 NAV_HOURS_LOCATION_LI.appendChild(HOURS_LOCATION_A).className = 'submenu-link';
+NAV_HOURS_LOCATION_LI.setAttribute('id', 'location-link')
 
 NAV_MENU_UL.appendChild(NAV_MENUS_LI);
 NAV_MENUS_LI.appendChild(MENUS_A).className = 'submenu-link';
+NAV_MENUS_LI.setAttribute('id', 'menu-link')
 
 NAV_MENU_UL.appendChild(NAV_ABOUT_LI);
 NAV_ABOUT_LI.appendChild(ABOUT_A).className = 'submenu-link';
+NAV_ABOUT_LI.setAttribute('id', 'about-link')
 
 NAV_MENU_UL.appendChild(NAV_PRIVATE_EVENTS_LI);
 NAV_PRIVATE_EVENTS_LI.appendChild(PRIVATE_EVENTS_A).className = 'submenu-link';
+NAV_PRIVATE_EVENTS_LI.setAttribute('id', 'private-events-link')
 
 // Append banner image to homepage
 CONTAINER_DIV.appendChild(COVER_IMAGE);
 
-// BUG: .submenu-link needs to be specific, querySelector a specific ID for each link to make each link work correctly
-document.querySelector('.submenu-link').addEventListener('click', () => {
+// Switch to location page
+document.querySelector('#location-link').addEventListener('click', () => {
+    // alternatively set display: none for each container
     document.body.removeChild(CONTAINER_DIV)
     const LOCATION_CONTAINER_DIV = document.createElement('div')
 
-    document.body.appendChild(LOCATION_CONTAINER_DIV).className = 'about-page'
-    LOCATION_CONTAINER_DIV.innerHTML = "ABOUT PAGE"
+    document.body.appendChild(LOCATION_CONTAINER_DIV).className = 'location-page'
+    LOCATION_CONTAINER_DIV.innerHTML = "LOCATION PAGE"
 
     return LOCATION_CONTAINER_DIV
+})
+
+// Switch to menu page
+document.querySelector('#menu-link').addEventListener('click', () => {
+    document.body.removeChild(CONTAINER_DIV)
+    const MENU_CONTAINER_DIV = document.createElement('div')
+
+    document.body.appendChild(MENU_CONTAINER_DIV).className = 'menu-page'
+    MENU_CONTAINER_DIV.innerHTML = "MENU PAGE"
+
+    return MENU_CONTAINER_DIV
+})
+
+// Switch to about page
+document.querySelector('#about-link').addEventListener('click', () => {
+    document.body.removeChild(CONTAINER_DIV)
+    const ABOUT_CONTAINER_DIV = document.createElement('div')
+
+    document.body.appendChild(ABOUT_CONTAINER_DIV).className = 'about-page'
+    ABOUT_CONTAINER_DIV.innerHTML = "ABOUT PAGE"
+
+    return ABOUT_CONTAINER_DIV
+})
+
+// Switch to private events page
+document.querySelector('#private-events-link').addEventListener('click', () => {
+    document.body.removeChild(CONTAINER_DIV)
+    const EVENTS_CONTAINER_DIV = document.createElement('div')
+
+    document.body.appendChild(EVENTS_CONTAINER_DIV).className = 'privatet-events-page'
+    EVENTS_CONTAINER_DIV.innerHTML = "PRIVATE EVENTS PAGE"
+
+    return EVENTS_CONTAINER_DIV
 })
 
 // const aboutPage = new PageUI();
