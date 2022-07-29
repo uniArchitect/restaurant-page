@@ -1,23 +1,7 @@
 // Home Page
 import './styles.css';
 import Cover_Image from './images/boba-cover.jpg';
-
-// Class to create new page when submenu-link is 'clicked'
-// class PageUI {
-//     constructor(pageName) {
-//         this.name = pageName
-//     }
-
-//     // switch to About page
-//     aboutPage = document.querySelector('.submenu-link').addEventListener('click', () => {
-//         document.body.removeChild('CONTAINER_DIV')
-//         const ABOUT_CONTAINER_DIV = document.createElement('div')
-
-//         document.body.appendChild(ABOUT_CONTAINER_DIV)
-
-//         return ABOUT_CONTAINER_DIV
-//     })
-// }
+import locationChange from './location.js';
 
 // GLOBAL SCOPE
 const HEADER_DIV = document.createElement('div');
@@ -64,33 +48,28 @@ HEADER_DIV.appendChild(NAV_LOGO_DIV).className = 'nav-logo';
 
 NAV_MENU_UL.appendChild(NAV_HOURS_LOCATION_LI);
 NAV_HOURS_LOCATION_LI.appendChild(HOURS_LOCATION_A).className = 'submenu-link';
-NAV_HOURS_LOCATION_LI.setAttribute('id', 'location-link')
+HOURS_LOCATION_A.setAttribute('id', 'location-link');
+const locationTab = document.querySelector('#location-link');
 
 NAV_MENU_UL.appendChild(NAV_MENUS_LI);
 NAV_MENUS_LI.appendChild(MENUS_A).className = 'submenu-link';
-NAV_MENUS_LI.setAttribute('id', 'menu-link')
+MENUS_A.setAttribute('id', 'menu-link')
 
 NAV_MENU_UL.appendChild(NAV_ABOUT_LI);
 NAV_ABOUT_LI.appendChild(ABOUT_A).className = 'submenu-link';
-NAV_ABOUT_LI.setAttribute('id', 'about-link')
+ABOUT_A.setAttribute('id', 'about-link')
 
 NAV_MENU_UL.appendChild(NAV_PRIVATE_EVENTS_LI);
 NAV_PRIVATE_EVENTS_LI.appendChild(PRIVATE_EVENTS_A).className = 'submenu-link';
-NAV_PRIVATE_EVENTS_LI.setAttribute('id', 'private-events-link')
+PRIVATE_EVENTS_A.setAttribute('id', 'private-events-link')
 
 // Append banner image to homepage
 CONTAINER_DIV.appendChild(COVER_IMAGE);
 
 // Switch to location page
-document.querySelector('#location-link').addEventListener('click', () => {
-    // alternatively set display: none for each container
-    document.body.removeChild(CONTAINER_DIV)
-    const LOCATION_CONTAINER_DIV = document.createElement('div')
-
-    document.body.appendChild(LOCATION_CONTAINER_DIV).className = 'location-page'
-    LOCATION_CONTAINER_DIV.innerHTML = "LOCATION PAGE"
-
-    return LOCATION_CONTAINER_DIV
+// locationChange function is added after the callback fn so it does not run immediately when the page runs
+locationTab.addEventListener('click', () => {
+    locationChange(CONTAINER_DIV);
 })
 
 // Switch to menu page
