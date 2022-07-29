@@ -15,6 +15,7 @@ export default function menuChange() {
 
     document.body.appendChild(MENU_CONTAINER_DIV).className = 'menu-page'
     MENU_CONTAINER_DIV.innerHTML = "MENU PAGE"
+    MENU_CONTAINER_DIV.style.display = 'block'
 
     return MENU_CONTAINER_DIV
 }

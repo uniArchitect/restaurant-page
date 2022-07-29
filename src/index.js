@@ -66,7 +66,7 @@ const aboutTab = document.querySelector('#about-link');
 
 NAV_MENU_UL.appendChild(NAV_PRIVATE_EVENTS_LI);
 NAV_PRIVATE_EVENTS_LI.appendChild(PRIVATE_EVENTS_A).className = 'submenu-link';
-PRIVATE_EVENTS_A.setAttribute('id', 'private-events-link')
+PRIVATE_EVENTS_A.setAttribute('id', 'events-link')
 const eventsTab = document.querySelector('#events-link');
 
 // Append banner image to homepage
@@ -79,48 +79,18 @@ locationTab.addEventListener('click', () => {
 })
 
 // Switch to menu page
-// document.querySelector('#menu-link').addEventListener('click', () => {
-//     document.body.removeChild(CONTAINER_DIV)
-//     const MENU_CONTAINER_DIV = document.createElement('div')
-
-//     document.body.appendChild(MENU_CONTAINER_DIV).className = 'menu-page'
-//     MENU_CONTAINER_DIV.innerHTML = "MENU PAGE"
-
-//     return MENU_CONTAINER_DIV
-// })
-
-locationTab.addEventListener('click', () => {
-    locationChange();
+menuTab.addEventListener('click', () => {
+    menuChange();
 })
 
 // Switch to about page
-// document.querySelector('#about-link').addEventListener('click', () => {
-//     document.body.removeChild(CONTAINER_DIV)
-//     const ABOUT_CONTAINER_DIV = document.createElement('div')
-
-//     document.body.appendChild(ABOUT_CONTAINER_DIV).className = 'about-page'
-//     ABOUT_CONTAINER_DIV.innerHTML = "ABOUT PAGE"
-
-//     return ABOUT_CONTAINER_DIV
-// })
-
-locationTab.addEventListener('click', () => {
-    locationChange();
+aboutTab.addEventListener('click', () => {
+    aboutChange();
 })
 
 // Switch to private events page
-// document.querySelector('#private-events-link').addEventListener('click', () => {
-//     document.body.removeChild(CONTAINER_DIV)
-//     const EVENTS_CONTAINER_DIV = document.createElement('div')
-
-//     document.body.appendChild(EVENTS_CONTAINER_DIV).className = 'privatet-events-page'
-//     EVENTS_CONTAINER_DIV.innerHTML = "PRIVATE EVENTS PAGE"
-
-//     return EVENTS_CONTAINER_DIV
-// })
-
-locationTab.addEventListener('click', () => {
-    locationChange();
+eventsTab.addEventListener('click', () => {
+    eventsChange();
 })
 
 export { CONTAINER_DIV, locationTab, menuTab, aboutTab, eventsTab }

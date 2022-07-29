@@ -15,6 +15,7 @@ export default function locationChange() {
 
     document.body.appendChild(LOCATION_CONTAINER_DIV).className = 'location-page'
     LOCATION_CONTAINER_DIV.innerHTML = "LOCATION PAGE"
+    LOCATION_CONTAINER_DIV.style.display = 'block'
 
     return LOCATION_CONTAINER_DIV
 }

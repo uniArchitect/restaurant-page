@@ -15,6 +15,7 @@ export default function aboutChange() {
 
     document.body.appendChild(ABOUT_CONTAINER_DIV).className = 'about-page'
     ABOUT_CONTAINER_DIV.innerHTML = "ABOUT PAGE"
+    ABOUT_CONTAINER_DIV.style.display = 'block'
 
     return ABOUT_CONTAINER_DIV
 }
