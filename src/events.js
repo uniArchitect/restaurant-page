@@ -15,7 +15,7 @@ export default function eventsChange() {
 
     document.body.appendChild(EVENTS_CONTAINER_DIV).className = 'events-page'
     EVENTS_CONTAINER_DIV.innerHTML = "EVENTS PAGE"
-    ABOUT_CONTAINER_DIV.style.display = 'block'
+    EVENTS_CONTAINER_DIV.style.display = 'block'
 
     return EVENTS_CONTAINER_DIV
 }

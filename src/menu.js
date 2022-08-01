@@ -17,6 +17,8 @@ export default function menuChange() {
     MENU_CONTAINER_DIV.innerHTML = "MENU PAGE"
     MENU_CONTAINER_DIV.style.display = 'block'
 
+    // create page layout for menu
+
     return MENU_CONTAINER_DIV
 }
 
