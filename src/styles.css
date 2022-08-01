@@ -82,6 +82,12 @@ img {
             gap: .5em;
         }
 
+        /* .menu-item :hover {
+            border: #e98074;
+            border-style: solid;
+            border-width: thin;
+        } */
+
             .item-name {
                 font-size: 1em;
                 font-weight: bold;

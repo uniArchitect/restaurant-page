@@ -5,6 +5,9 @@ import { EVENTS_CONTAINER_DIV } from './events.js';
 
 // Switch to location page
 const ABOUT_CONTAINER_DIV = document.createElement('div')
+const ABOUT_HEADER_DIV = document.createElement('div')
+const ABOUT_BANNER_IMG = document.createElement('img')
+const ABOUT_TEXT_DIV = document.createElement('div')
 
 export default function aboutChange() {
     // alternatively set display: none for each container
@@ -14,10 +17,20 @@ export default function aboutChange() {
     EVENTS_CONTAINER_DIV.style.display = 'none'
 
     document.body.appendChild(ABOUT_CONTAINER_DIV).className = 'about-page'
-    ABOUT_CONTAINER_DIV.innerHTML = "ABOUT PAGE"
-    ABOUT_CONTAINER_DIV.style.display = 'block'
+    // ABOUT_CONTAINER_DIV.innerHTML = "ABOUT PAGE"
+    ABOUT_CONTAINER_DIV.style.display = 'grid'
 
     return ABOUT_CONTAINER_DIV
 }
 
-export { ABOUT_CONTAINER_DIV };
+const aboutCreate = () => {
+    ABOUT_CONTAINER_DIV.appendChild(ABOUT_HEADER_DIV).className = 'about-header'
+    ABOUT_HEADER_DIV.innerHTML = 'ABOUT'
+
+    // ABOUT_CONTAINER_DIV.appendChild(ABOUT_BANNER_IMG).className = 'about-banner'
+
+    ABOUT_CONTAINER_DIV.appendChild(ABOUT_TEXT_DIV).className = 'about-text'
+    ABOUT_TEXT_DIV.innerHTML = 'lorem.50'
+}
+
+export { ABOUT_CONTAINER_DIV, aboutCreate };
