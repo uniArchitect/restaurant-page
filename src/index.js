@@ -2,7 +2,7 @@
 import './styles.css';
 import Cover_Image from './images/boba-cover.jpg';
 import locationChange, { LOCATION_CONTAINER_DIV } from './location.js';
-import menuChange, { MENU_CONTAINER_DIV } from './menu.js';
+import menuChange, { MENU_CONTAINER_DIV, menuItem } from './menu.js';
 import aboutChange, { ABOUT_CONTAINER_DIV } from './about.js';
 import eventsChange, { EVENTS_CONTAINER_DIV } from './events.js';
 

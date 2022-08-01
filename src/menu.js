@@ -13,6 +13,20 @@ const MENU_ITEM_TWO_DIV = document.createElement('div')
 const MENU_ITEM_THREE_DIV = document.createElement('div')
 const MENU_ITEM_FOUR_DIV = document.createElement('div')
 
+// function to replicate a basic menu item
+const menuItem = (div) => {
+    // elements within the menu line item
+    const itemName = document.createElement('div')
+    const itemText = document.createElement('div')
+    const itemPrice = document.createElement('div')
+    const itemImage = document.createElement('div')
+
+    div.appendChild(itemName).className = 'item-name'
+    div.appendChild(itemText).className = 'item-text'
+    div.appendChild(itemPrice).className = 'item-price'
+    div.appendChild(itemImage).className = 'item-image'
+}
+
 export default function menuChange() {
     // alternatively set display: none for each container
     CONTAINER_DIV.style.display = 'none'
@@ -25,9 +39,21 @@ export default function menuChange() {
     MENU_CONTAINER_DIV.style.display = 'block'
 
     // create page layout for menu
-    
+    MENU_CONTAINER_DIV.appendChild(MENU_HEADER_DIV).className = 'menu-header'
+    MENU_CONTAINER_DIV.appendChild(MENU_ITEM_ONE_DIV).className = 'menu-item'
+    MENU_CONTAINER_DIV.appendChild(MENU_ITEM_TWO_DIV).className = 'menu-item'
+    MENU_CONTAINER_DIV.appendChild(MENU_ITEM_THREE_DIV).className = 'menu-item'
+    MENU_CONTAINER_DIV.appendChild(MENU_ITEM_FOUR_DIV).className = 'menu-item'
+
+    menuItem(MENU_ITEM_ONE_DIV)
+    menuItem(MENU_ITEM_TWO_DIV)
+    menuItem(MENU_ITEM_THREE_DIV)
+    menuItem(MENU_ITEM_FOUR_DIV)
 
     return MENU_CONTAINER_DIV
 }
 
-export { MENU_CONTAINER_DIV };
+export { 
+    MENU_CONTAINER_DIV, 
+    menuItem 
+};
