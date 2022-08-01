@@ -55,8 +55,18 @@ img {
 .body-container {
     width: 1084px;
 }
+
     .menu-page {
         display: grid;
-        grid-template-rows: 5;
-        grid-template-columns: 1;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
     }
+
+        .menu-header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-item {
+            gap: 2em;
+        }
