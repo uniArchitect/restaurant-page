@@ -60,13 +60,33 @@ img {
         display: grid;
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: 1fr;
+        gap: .5em;
     }
 
         .menu-header {
             display: flex;
             justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 2em;
         }
 
         .menu-item {
-            gap: 2em;
+            display: grid;
+            /* background-color: #eae7dc; */
+            padding: 1em;
+            border: lightgray;
+            border-style: solid;
+            border-width: thin;
+            border-radius: 1em;
+            gap: .5em;
         }
+
+            .item-name {
+                font-size: 1em;
+                font-weight: bold;
+            }
+
+            .item-text {
+                color: gray;
+            }

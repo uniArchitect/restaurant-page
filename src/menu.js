@@ -12,6 +12,7 @@ const MENU_ITEM_ONE_DIV = document.createElement('div')
 const MENU_ITEM_TWO_DIV = document.createElement('div')
 const MENU_ITEM_THREE_DIV = document.createElement('div')
 const MENU_ITEM_FOUR_DIV = document.createElement('div')
+const MENU_ITEM_FIVE_DIV = document.createElement('div')
 
 // function to replicate a basic menu item
 const menuItem = (div) => {
@@ -36,12 +37,14 @@ const menuCreate = () => {
     MENU_CONTAINER_DIV.appendChild(MENU_ITEM_TWO_DIV).className = 'menu-item'
     MENU_CONTAINER_DIV.appendChild(MENU_ITEM_THREE_DIV).className = 'menu-item'
     MENU_CONTAINER_DIV.appendChild(MENU_ITEM_FOUR_DIV).className = 'menu-item'
+    MENU_CONTAINER_DIV.appendChild(MENU_ITEM_FIVE_DIV).className = 'menu-item'
 
     // BUG: menuItem repeats after menuChange is called
     menuItem(MENU_ITEM_ONE_DIV)
     menuItem(MENU_ITEM_TWO_DIV)
     menuItem(MENU_ITEM_THREE_DIV)
     menuItem(MENU_ITEM_FOUR_DIV)
+    menuItem(MENU_ITEM_FIVE_DIV)
 
     // Item One
     MENU_ITEM_ONE_DIV.children[0].innerHTML = 'MILK TEA'
@@ -59,9 +62,14 @@ const menuCreate = () => {
     MENU_ITEM_THREE_DIV.children[2].innerHTML = '$5.00'
 
     // Item Four
-    MENU_ITEM_THREE_DIV.children[0].innerHTML = 'JASMINE TEA'
-    MENU_ITEM_THREE_DIV.children[1].innerHTML = 'Our fourth most popular drink!'
-    MENU_ITEM_THREE_DIV.children[2].innerHTML = '$5.00'
+    MENU_ITEM_FOUR_DIV.children[0].innerHTML = 'JASMINE TEA'
+    MENU_ITEM_FOUR_DIV.children[1].innerHTML = 'Our fourth most popular drink!'
+    MENU_ITEM_FOUR_DIV.children[2].innerHTML = '$5.00'
+
+    // Item Five
+    MENU_ITEM_FIVE_DIV.children[0].innerHTML = 'MANGO SLUSH'
+    MENU_ITEM_FIVE_DIV.children[1].innerHTML = 'Our fifth most popular drink!'
+    MENU_ITEM_FIVE_DIV.children[2].innerHTML = '$5.00'
 }
 
 export default function menuChange() {
