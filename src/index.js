@@ -87,7 +87,7 @@ PRIVATE_EVENTS_A.setAttribute('id', 'events-link')
 const eventsTab = document.querySelector('#events-link');
 
 // Append banner image to homepage
-CONTAINER_DIV.appendChild(COVER_IMAGE);
+CONTAINER_DIV.appendChild(COVER_IMAGE).className = 'home-image';
 
 // Switch to home page
 homeTab.addEventListener('click', () => {
