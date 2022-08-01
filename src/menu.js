@@ -35,20 +35,43 @@ export default function menuChange() {
     EVENTS_CONTAINER_DIV.style.display = 'none'
 
     document.body.appendChild(MENU_CONTAINER_DIV).className = 'menu-page'
-    MENU_CONTAINER_DIV.innerHTML = "MENU PAGE"
+    // MENU_CONTAINER_DIV.innerHTML = "MENU PAGE"
     MENU_CONTAINER_DIV.style.display = 'block'
 
     // create page layout for menu
     MENU_CONTAINER_DIV.appendChild(MENU_HEADER_DIV).className = 'menu-header'
+    MENU_HEADER_DIV.innerHTML = 'MENU'
+
     MENU_CONTAINER_DIV.appendChild(MENU_ITEM_ONE_DIV).className = 'menu-item'
     MENU_CONTAINER_DIV.appendChild(MENU_ITEM_TWO_DIV).className = 'menu-item'
     MENU_CONTAINER_DIV.appendChild(MENU_ITEM_THREE_DIV).className = 'menu-item'
     MENU_CONTAINER_DIV.appendChild(MENU_ITEM_FOUR_DIV).className = 'menu-item'
 
+    // BUG: menuItem repeats after menuChange is called
     menuItem(MENU_ITEM_ONE_DIV)
     menuItem(MENU_ITEM_TWO_DIV)
     menuItem(MENU_ITEM_THREE_DIV)
     menuItem(MENU_ITEM_FOUR_DIV)
+
+    // Item One
+    MENU_ITEM_ONE_DIV.children[1].innerHTML = 'MILK TEA'
+    MENU_ITEM_ONE_DIV.children[2].innerHTML = 'Our most popular drink!'
+    MENU_ITEM_ONE_DIV.children[3].innerHTML = '$5.00'
+
+    // Item Two
+    MENU_ITEM_TWO_DIV.children[1].innerHTML = 'OOLONG TEA'
+    MENU_ITEM_TWO_DIV.children[2].innerHTML = 'Our second most popular drink!'
+    MENU_ITEM_TWO_DIV.children[3].innerHTML = '$5.00'
+
+    // Item Three
+    MENU_ITEM_THREE_DIV.children[1].innerHTML = 'BLACK TEA'
+    MENU_ITEM_THREE_DIV.children[2].innerHTML = 'Our third most popular drink!'
+    MENU_ITEM_THREE_DIV.children[3].innerHTML = '$5.00'
+
+    // Item Four
+    MENU_ITEM_THREE_DIV.children[1].innerHTML = 'JASMINE TEA'
+    MENU_ITEM_THREE_DIV.children[2].innerHTML = 'Our fourth most popular drink!'
+    MENU_ITEM_THREE_DIV.children[3].innerHTML = '$5.00'
 
     return MENU_CONTAINER_DIV
 }
