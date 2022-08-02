@@ -62,8 +62,15 @@ const contactCreate = () => {
 
     CONTACT_FORM.appendChild(FORM_UL)
 
-    FORM_UL.append(FORM_FIRST_NAME, FORM_LAST_NAME, FORM_EMAIL, FORM_MESSAGE, SUBMIT_BTN)
 
+    // Add all form fields
+    FORM_UL.appendChild(FORM_FIRST_NAME).className = 'form-li'
+    FORM_UL.appendChild(FORM_LAST_NAME).className = 'form-li'
+    FORM_UL.appendChild(FORM_EMAIL).className = 'form-li'
+    FORM_UL.appendChild(FORM_MESSAGE).className = 'form-li'
+    FORM_UL.appendChild(SUBMIT_BTN)
+
+    // Create - individual attributes for labels and inputs
     FORM_FIRST_NAME.append(FIRST_NAME_LABEL, FIRST_NAME_INPUT)
         FIRST_NAME_LABEL.innerHTML = 'FIRST NAME'
         FIRST_NAME_LABEL.setAttribute('for', 'first-name')
@@ -89,6 +96,7 @@ const contactCreate = () => {
         MESSAGE_INPUT.setAttribute('id', 'message')
         MESSAGE_INPUT.setAttribute('name', 'message')
 
+    // Create - Form submit button attributes
     SUBMIT_BTN.setAttribute('type', 'submit')
     SUBMIT_BTN.setAttribute('id', 'submit-btn')
     SUBMIT_BTN.setAttribute('value', 'Submit')
