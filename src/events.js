@@ -62,20 +62,36 @@ const contactCreate = () => {
 
     CONTACT_FORM.appendChild(FORM_UL)
 
-    FORM_UL.append(FORM_FIRST_NAME, FORM_LAST_NAME, FORM_EMAIL, FORM_MESSAGE)
+    FORM_UL.append(FORM_FIRST_NAME, FORM_LAST_NAME, FORM_EMAIL, FORM_MESSAGE, SUBMIT_BTN)
 
     FORM_FIRST_NAME.append(FIRST_NAME_LABEL, FIRST_NAME_INPUT)
         FIRST_NAME_LABEL.innerHTML = 'FIRST NAME'
         FIRST_NAME_LABEL.setAttribute('for', 'first-name')
+        FIRST_NAME_INPUT.setAttribute('required', '')
+        FIRST_NAME_INPUT.setAttribute('id', 'first-name')
+        FIRST_NAME_INPUT.setAttribute('name', 'first-name')
     FORM_LAST_NAME.append(LAST_NAME_LABEL, LAST_NAME_INPUT)
         LAST_NAME_LABEL.innerHTML = 'LAST NAME'
         LAST_NAME_LABEL.setAttribute('for', 'last-name')
+        LAST_NAME_INPUT.setAttribute('required', '')
+        LAST_NAME_INPUT.setAttribute('id', 'last-name')
+        LAST_NAME_INPUT.setAttribute('name', 'last-name')
     FORM_EMAIL.append(EMAIL_LABEL, EMAIL_INPUT)
         EMAIL_LABEL.innerHTML = 'EMAIL'
         EMAIL_LABEL.setAttribute('for', 'email')
+        EMAIL_INPUT.setAttribute('required', '')
+        EMAIL_INPUT.setAttribute('id', 'email')
+        EMAIL_INPUT.setAttribute('name', 'email')
     FORM_MESSAGE.append(MESSAGE_LABEL, MESSAGE_INPUT)
         MESSAGE_LABEL.innerHTML = 'MESSAGE'
-        MESSAGE_LABEL.setAttribute('for', 'email')
+        MESSAGE_LABEL.setAttribute('for', 'message')
+        MESSAGE_INPUT.setAttribute('required', '')
+        MESSAGE_INPUT.setAttribute('id', 'message')
+        MESSAGE_INPUT.setAttribute('name', 'message')
+
+    SUBMIT_BTN.setAttribute('type', 'submit')
+    SUBMIT_BTN.setAttribute('id', 'submit-btn')
+    SUBMIT_BTN.setAttribute('value', 'Submit')
 }
 
 export { EVENTS_CONTAINER_DIV, contactCreate };
