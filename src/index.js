@@ -1,7 +1,7 @@
 // Home Page
 import './styles.css';
 import Cover_Image from './images/boba-cover.jpg';
-import locationChange, { LOCATION_CONTAINER_DIV } from './location.js';
+// import locationChange, { LOCATION_CONTAINER_DIV } from './location.js';
 import menuChange, { MENU_CONTAINER_DIV, menuItem, menuCreate } from './menu.js';
 import aboutChange, { ABOUT_CONTAINER_DIV, aboutCreate } from './about.js';
 import eventsChange, { EVENTS_CONTAINER_DIV, contactCreate } from './events.js';
@@ -12,26 +12,26 @@ const CONTAINER_DIV = document.createElement('div');
 
 // Header submenu
 const NAV_MENU_UL = document.createElement('ul');
-const NAV_HOURS_LOCATION_LI = document.createElement('li');
+// const NAV_HOURS_LOCATION_LI = document.createElement('li');
 const NAV_MENUS_LI = document.createElement('li');
 const NAV_ABOUT_LI = document.createElement('li');
 const NAV_PRIVATE_EVENTS_LI = document.createElement('li');
 const NAV_LOGO_A = document.createElement('a');
-const HOURS_LOCATION_A = document.createElement('a');
+// const HOURS_LOCATION_A = document.createElement('a');
 const MENUS_A = document.createElement('a');
 const ABOUT_A = document.createElement('a');
 const PRIVATE_EVENTS_A = document.createElement('a');
 
 // Submenu link HTML
 NAV_LOGO_A.innerHTML = 'INITIAL TEA SHOP'
-HOURS_LOCATION_A.innerHTML = 'LOCATION'
+// HOURS_LOCATION_A.innerHTML = 'LOCATION'
 MENUS_A.innerHTML = 'MENU'
 ABOUT_A.innerHTML = 'ABOUT'
-PRIVATE_EVENTS_A.innerHTML = 'PRIVATE EVENTS'
+PRIVATE_EVENTS_A.innerHTML = 'CONTACT'
 
 // Append href link to submenu links
 NAV_LOGO_A.setAttribute('href', '#');
-HOURS_LOCATION_A.setAttribute('href', '#');
+// HOURS_LOCATION_A.setAttribute('href', '#');
 MENUS_A.setAttribute('href', '#');
 ABOUT_A.setAttribute('href', '#');
 PRIVATE_EVENTS_A.setAttribute('href', '#');
@@ -48,7 +48,7 @@ document.body.appendChild(CONTAINER_DIV).className = 'cover-container';
 
 function homeChange() {
     // alternatively set display: none for each container
-    LOCATION_CONTAINER_DIV.style.display = 'none'
+    // LOCATION_CONTAINER_DIV.style.display = 'none'
     MENU_CONTAINER_DIV.style.display = 'none'
     ABOUT_CONTAINER_DIV.style.display = 'none'
     EVENTS_CONTAINER_DIV.style.display = 'none'
@@ -66,10 +66,10 @@ HEADER_DIV.appendChild(NAV_LOGO_A).className = 'nav-logo';
 NAV_LOGO_A.setAttribute('id', 'home-link');
 const homeTab = document.querySelector('#home-link');
 
-NAV_MENU_UL.appendChild(NAV_HOURS_LOCATION_LI);
-NAV_HOURS_LOCATION_LI.appendChild(HOURS_LOCATION_A).className = 'submenu-link';
-HOURS_LOCATION_A.setAttribute('id', 'location-link');
-const locationTab = document.querySelector('#location-link');
+// NAV_MENU_UL.appendChild(NAV_HOURS_LOCATION_LI);
+// NAV_HOURS_LOCATION_LI.appendChild(HOURS_LOCATION_A).className = 'submenu-link';
+// HOURS_LOCATION_A.setAttribute('id', 'location-link');
+// const locationTab = document.querySelector('#location-link');
 
 NAV_MENU_UL.appendChild(NAV_MENUS_LI);
 NAV_MENUS_LI.appendChild(MENUS_A).className = 'submenu-link';
@@ -96,9 +96,9 @@ homeTab.addEventListener('click', () => {
 
 // Switch to location page
 // locationChange function is added after the callback fn so it does not run immediately when the page runs
-locationTab.addEventListener('click', () => {
-    locationChange();
-})
+// locationTab.addEventListener('click', () => {
+//     locationChange();
+// })
 
 // Switch to menu page
 menuCreate();
@@ -118,6 +118,6 @@ eventsTab.addEventListener('click', () => {
     eventsChange();
 })
 
-export { CONTAINER_DIV, locationTab, menuTab, aboutTab, eventsTab }
+export { CONTAINER_DIV, menuTab, aboutTab, eventsTab }
 
 // const aboutPage = new PageUI();
