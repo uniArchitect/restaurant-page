@@ -25,7 +25,7 @@ body, html {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    width: 1084px;
+    /* width: 1084px; */
 }
 
     li {
@@ -129,3 +129,40 @@ body, html {
             justify-content: center;
             align-items: center;
         }
+
+        .about-hours {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            height: 1em;
+        }
+
+            .hours-header {
+                grid-row: 1;
+                grid-column: 1 / 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 2em;
+                font-weight: bold;
+                font-size: 1em;
+                height: 2em;
+            }
+
+            .hours-days {
+                grid-row: 2;
+                grid-column: 1 / 2;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+                .day-list {
+                    position: relative;
+                    right: 2em;
+                }
+
+            .hours-time {
+                grid-row: 2;
+                display: flex;
+                justify-content: flex-start;
+            }
