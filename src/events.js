@@ -5,6 +5,35 @@ import { ABOUT_CONTAINER_DIV } from './about.js';
 
 // Switch to location page
 const EVENTS_CONTAINER_DIV = document.createElement('div')
+const CONTACT_HEADER_DIV = document.createElement('div')
+const CONTACT_TEXT_DIV = document.createElement('div')
+const CONTACT_FORM_CONTAINER_DIV = document.createElement('div')
+
+// Form variables
+const CONTACT_FORM = document.createElement('form')
+const FORM_UL = document.createElement('ul')
+
+// Form - First Name
+const FORM_FIRST_NAME = document.createElement('li')
+const FIRST_NAME_LABEL = document.createElement('label')
+const FIRST_NAME_INPUT = document.createElement('input')
+
+// Form - Last Name
+const FORM_LAST_NAME = document.createElement('li')
+const LAST_NAME_LABEL = document.createElement('label')
+const LAST_NAME_INPUT = document.createElement('input')
+
+// Form - Email
+const FORM_EMAIL = document.createElement('li')
+const EMAIL_LABEL = document.createElement('label')
+const EMAIL_INPUT = document.createElement('input')
+
+// Form - Message
+const FORM_MESSAGE = document.createElement('li')
+const MESSAGE_LABEL = document.createElement('label')
+const MESSAGE_INPUT = document.createElement('input')
+
+const SUBMIT_BTN = document.createElement('input')
 
 export default function eventsChange() {
     // alternatively set display: none for each container
@@ -14,10 +43,39 @@ export default function eventsChange() {
     ABOUT_CONTAINER_DIV.style.display = 'none'
 
     document.body.appendChild(EVENTS_CONTAINER_DIV).className = 'events-page'
-    EVENTS_CONTAINER_DIV.innerHTML = "EVENTS PAGE"
-    EVENTS_CONTAINER_DIV.style.display = 'block'
+    EVENTS_CONTAINER_DIV.style.display = 'grid'
 
     return EVENTS_CONTAINER_DIV
 }
 
-export { EVENTS_CONTAINER_DIV };
+const contactCreate = () => {
+    // Page Header
+    EVENTS_CONTAINER_DIV.appendChild(CONTACT_HEADER_DIV).className = 'contact-header'
+    CONTACT_HEADER_DIV.innerHTML = 'CONTACT US'
+
+    EVENTS_CONTAINER_DIV.appendChild(CONTACT_TEXT_DIV).className = 'contact-text'
+    CONTACT_TEXT_DIV.innerHTML = 'Feel free to let us know how great our boba is down below!'
+
+    // Form - Container
+    EVENTS_CONTAINER_DIV.appendChild(CONTACT_FORM_CONTAINER_DIV).className = 'contact-form-container'
+    CONTACT_FORM_CONTAINER_DIV.appendChild(CONTACT_FORM).className = 'contact-form'
+
+    CONTACT_FORM.appendChild(FORM_UL)
+
+    FORM_UL.append(FORM_FIRST_NAME, FORM_LAST_NAME, FORM_EMAIL, FORM_MESSAGE)
+
+    FORM_FIRST_NAME.append(FIRST_NAME_LABEL, FIRST_NAME_INPUT)
+        FIRST_NAME_LABEL.innerHTML = 'FIRST NAME'
+        FIRST_NAME_LABEL.setAttribute('for', 'first-name')
+    FORM_LAST_NAME.append(LAST_NAME_LABEL, LAST_NAME_INPUT)
+        LAST_NAME_LABEL.innerHTML = 'LAST NAME'
+        LAST_NAME_LABEL.setAttribute('for', 'last-name')
+    FORM_EMAIL.append(EMAIL_LABEL, EMAIL_INPUT)
+        EMAIL_LABEL.innerHTML = 'EMAIL'
+        EMAIL_LABEL.setAttribute('for', 'email')
+    FORM_MESSAGE.append(MESSAGE_LABEL, MESSAGE_INPUT)
+        MESSAGE_LABEL.innerHTML = 'MESSAGE'
+        MESSAGE_LABEL.setAttribute('for', 'email')
+}
+
+export { EVENTS_CONTAINER_DIV, contactCreate };
