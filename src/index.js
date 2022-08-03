@@ -53,7 +53,7 @@ function homeChange() {
     ABOUT_CONTAINER_DIV.style.display = 'none'
     EVENTS_CONTAINER_DIV.style.display = 'none'
 
-    CONTAINER_DIV.style.display = 'block'
+    CONTAINER_DIV.style.display = 'flex'
 
     return CONTAINER_DIV
 }
