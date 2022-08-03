@@ -31,7 +31,7 @@ const EMAIL_INPUT = document.createElement('input')
 // Form - Message
 const FORM_MESSAGE = document.createElement('li')
 const MESSAGE_LABEL = document.createElement('label')
-const MESSAGE_INPUT = document.createElement('input')
+const MESSAGE_INPUT = document.createElement('textarea')
 
 const SUBMIT_BTN = document.createElement('input')
 
@@ -95,6 +95,7 @@ const contactCreate = () => {
         MESSAGE_INPUT.setAttribute('required', '')
         MESSAGE_INPUT.setAttribute('id', 'message')
         MESSAGE_INPUT.setAttribute('name', 'message')
+        MESSAGE_INPUT.setAttribute('style', 'font-family:Montserrat; font-size:1em;')
 
     // Create - Form submit button attributes
     SUBMIT_BTN.setAttribute('type', 'submit')

@@ -224,7 +224,19 @@ body, html {
                     height: 1.75em;
                 }
 
+                textarea {
+                    border-radius: 5px;
+                    border: 1px solid;
+                    border-color: #d3d3d3;
+                    height: 1.75em;
+                }
+
                     input:focus {
                         outline: none;
-                        border: 1px solid #FA6900;
+                        border: 1px solid #e85a4f;
+                    }
+
+                    textarea:focus {
+                        outline: none;
+                        border: 1px solid #e85a4f;
                     }
