@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import { CONTAINER_DIV } from './index.js';
 import { LOCATION_CONTAINER_DIV } from './location.js';
 import { ABOUT_CONTAINER_DIV } from './about.js';
